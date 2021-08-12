@@ -54,7 +54,7 @@ router.delete('/:id',async(req,res)=> {
     try{
         const alien = await Alien.findById(req.params.id) 
         await alien.remove() 
-        res.send('Done')
+        res.send('Done, Updated')
     }catch(err){
         res.send('Error'+err)
     }
